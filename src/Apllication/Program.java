@@ -15,12 +15,12 @@ public class Program {
         int n = sc.nextInt();
 
         for (int i = 0; i < n; i++) {
-            Integer value = sc.nextInt();
+            String value = sc.next();
             ps.addValue(value);
         }
 
         ps.print();
-        Integer x = ps.first();
+        String x = ps.first();
         System.out.println("First: " + x);
 
         sc.close();

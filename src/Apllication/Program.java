@@ -2,6 +2,7 @@ package Apllication;
 
 import entities.PrintService;
 import entities.PrintServiceInteger;
+import entities.PrintServiceType;
 
 import java.util.Scanner;
 
@@ -11,18 +12,19 @@ public class Program {
 
         Scanner sc = new Scanner(System.in);
 
-        PrintServiceInteger ps = new PrintServiceInteger();
+        PrintServiceType<String> ps = new PrintServiceType<>();
+
 
         System.out.print("How many values? ");
         int n = sc.nextInt();
 
         for (int i = 0; i < n; i++) {
-            Integer value = sc.nextInt();
+            String value = sc.next();
             ps.addValue(value);
         }
 
         ps.print();
-        Integer x = ps.first();
+        String x = ps.first();
         System.out.println("First: " + x);
 
         sc.close();
